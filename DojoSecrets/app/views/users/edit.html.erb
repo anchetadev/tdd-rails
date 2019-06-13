@@ -1,0 +1,12 @@
+<h1>Users#edit</h1>
+<form method="POST" action="/users/<%=current_user.id%>/edit">
+    <input type="hidden" name="_method" value="patch" >
+    Email: <input type="text" name="Email" value="<%=current_user.email%>">
+    Name: <input type="text" name ="Name" value="<%=current_user.name%>">
+    <input type="submit" value="Update">
+</form>
+<form action="/users/<%=current_user.id%>" method='DELETE'>
+    <input type="submit" value="Delete Account" data-method="DELETE">
+    
+</form>
+
